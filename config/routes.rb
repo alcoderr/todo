@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :tasks
+ root 'task#index'
+ 
+  resources :tasks do
+    put :complete, on: :member
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
