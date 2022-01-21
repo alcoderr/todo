@@ -6,7 +6,7 @@ class Task < ActiveRecord::Base
   ]
 
 def complete!
-  self.comleted = true
+  self.completed = true
   save
 end
 end
